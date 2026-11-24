@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Артефакты сборки (Г4)
+build/
+dist/
+*.whl
+
+# Редакторы (Г5)
+.idea/
+.vscode/
+*.swp
+
+# ОС
+.DS_Store

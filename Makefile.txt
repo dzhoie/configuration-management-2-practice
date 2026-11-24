@@ -1,0 +1,19 @@
+.PHONY: install run test lint clean
+
+PY ?= python
+
+install:
+	$(PY) -m pip install -e .
+
+run:
+	$(PY) -m depviz $(ARGS)
+
+test:
+	$(PY) -m unittest discover -s tests -t .
+
+lint:
+	$(PY) -m compileall -q src tests
+
+clean:
+	find . -name '__pycache__' -type d -prune -exec rm -rf {} +
+	rm -rf build dist *.egg-info .pytest_cache
